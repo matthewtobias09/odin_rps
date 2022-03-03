@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Rock Paper Scissors - Odin Project</title>
+</head>
+
+<body>
+    <div class="wrap">
+    <header>
+        <span class="fire">Fire</span> <span class="earth">Earth</span> <span class="water">Water</span><br>
+    </header>
+
+    <main>
+    <section id="description">
+        <span class="fire">Fire</span> beats <span class="earth">Earth</span> |
+        <span class="earth">Earth</span> beats <span class="water">Water</span> |
+        <span class="water">Water</span> beats <span class="fire">Fire</span>
+
+        <br><br>First to <span class="p2-font">five points</span> wins
+    </section>
+
+    <section id="score-content">
+        <div>Player Points: <span class="player-points">Score</span></div> 
+        <div>Computer Points: <span class="computer-points">Score</span></div>
+    </section>
+
+    <section class="flex-content">
+        <div id="player-input">
+            <button id="firebtn"><img src="img/fire.png"></button>
+            <button id="earthbtn"><img src="img/earth.png"></button>
+            <button id="waterbtn"><img src="img/water.png"></button>
+        </div>
+            <div id="input-caption">
+            <span class="fire caption">Fire</span> | <span class="earth caption">Earth</span> | <span class="water caption">Water</span>
+            </div>
+
+            <div id="selection">
+                <div>Player picked: <span class="player-selection">Item</span></div> 
+                <div>Computer picked: <span class="computer-selection">Item</span></div>
+            </div>
+
+            <div id="result">
+                <div>Player <span class="text-result">won/lost</span> against computer this round</div>
+            </div>
+        </div>
+    </section>
+    </main>
+    </div>  
+    <footer>
+        Made by Matthew Tobias&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/matthewtobias09"><img src="img/sm/github.png"></a> 
+        | <a href="https://www.linkedin.com/in/matthew-tobias-62935a22a/"><img src="img/sm/linkedin.png"></a> 
+        | <a href="https://www.twitter.com/matthewtobias09"><img src="img/sm/twitter.png"></a> 
+    </footer>
+    <script type="text/javascript" src="rps.js"></script>
+</body>

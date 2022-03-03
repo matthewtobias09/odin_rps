@@ -1,0 +1,177 @@
+/* IMPORT FONTS FOR PROJECT */
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* SETTINGS */
+
+html, body {
+    --smoke: #655967;
+    --fire: #f09717;
+    --water: #3ca8df;
+    --earth: #06a322;
+    height: 100%;
+}
+
+/** TEXT MARKUP **/
+
+.fire {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--fire);
+    text-shadow: 3px 3px #FF0000;
+}
+
+.water {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--water);
+    text-shadow: 3px 3px #06597e;
+
+}
+
+.earth {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--earth);
+    text-shadow: 3px 3px #0a8317;
+
+}
+
+header .fire {
+    text-shadow: 5px 5px #FF0000;
+}
+
+header .water {
+    text-shadow: 5px 5px #06597e;
+}
+
+header .earth {
+    text-shadow: 5px 5px #0a8317;
+}
+
+.p2-font {
+    font-size: 2rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.wrap {
+    min-height: 100%;
+}
+
+/* PAGE CONTENT DESIGN */
+
+header {
+    padding-top: 10vh;
+    font-size: 5rem;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+main {
+    font-family: 'Press Start 2P', cursive;
+    overflow-wrap: normal;
+    overflow: auto;
+    /* MUST BE SAME HEIGHT AS FOOTER */
+    padding-bottom: 180px;
+}
+
+footer {
+    /*FONT SETTINGS FOR FOOTER */
+    font-size: 3rem;
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+    color: var(--smoke);
+
+    /* NEGATIVE VALUE OF FOOTER HEIGHT */
+    background-color: #090909;
+    margin-top: -180px;
+    position: relative;
+    height: 180px;
+    clear: both; 
+}
+
+button {
+    border: none;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
+/* ID'S FOR SPECIFIC CONTENT */
+
+#description {
+    text-align: center;
+    padding-top: 10vh;
+    text-shadow: 3px 3px var(--smoke);
+}
+
+#score-content {
+    padding-left: 30vh;
+    padding-right: 30vh;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10vh;
+}
+
+#player-input {
+    padding-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#player-input img {
+    width: 100%;
+    height: auto;
+}
+
+#input-caption {
+    text-align: center;
+}
+
+#selection {
+    padding-left: 30vh;
+    padding-right: 30vh;
+    padding-top: 6vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#result {
+    padding-top: 6vh;
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+
+/* FORMAT FOR PHONES */ 
+
+@media only screen and (max-width: 600px)
+{
+    header {
+        font-size: 3rem;
+    }
+
+    #score-content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+    }
+    
+    #selection {
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-top: 6vh;
+    display: flex;
+    justify-content: space-between;
+    }
+}
