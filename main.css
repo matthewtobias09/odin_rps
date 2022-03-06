@@ -21,35 +21,35 @@ html, body {
 
 /** TEXT MARKUP **/
 
-.fire {
+.fireSpan {
     font-family: 'Press Start 2P', cursive;
     color: var(--fire);
     text-shadow: 3px 3px #FF0000;
 }
 
-.water {
+.waterSpan {
     font-family: 'Press Start 2P', cursive;
     color: var(--water);
     text-shadow: 3px 3px #06597e;
 
 }
 
-.earth {
+.earthSpan {
     font-family: 'Press Start 2P', cursive;
     color: var(--earth);
     text-shadow: 3px 3px #0a8317;
 
 }
 
-header .fire {
+header .fireSpan {
     text-shadow: 5px 5px #FF0000;
 }
 
-header .water {
+header .waterSpan {
     text-shadow: 5px 5px #06597e;
 }
 
-header .earth {
+header .earthSpan {
     text-shadow: 5px 5px #0a8317;
 }
 
@@ -94,15 +94,6 @@ footer {
     clear: both; 
 }
 
-button {
-    border: none;
-}
-
-button:focus {
-    border: none;
-    outline: none;
-}
-
 /* ID'S FOR SPECIFIC CONTENT */
 
 #description {
@@ -119,7 +110,7 @@ button:focus {
     padding-top: 10vh;
 }
 
-#player-input {
+#image-icons {
     padding-top: 10vh;
     display: flex;
     flex-wrap: wrap;
@@ -127,8 +118,7 @@ button:focus {
     align-items: center;
 }
 
-#player-input img {
-    width: 100%;
+#image-icons img {
     height: auto;
 }
 
@@ -149,6 +139,24 @@ button:focus {
     text-align: center;
     padding-bottom: 5vh;
 }
+
+
+/* BUTTONS AND JAVASCRIPT FORMATTING */
+
+button {
+    border-radius:2em;
+    padding: 1.5vh;
+    opacity: 50%;
+    transition: 100ms;
+}
+
+button:hover {
+    opacity: 100%;
+    cursor: pointer;
+    transform: scale(1.2);
+    
+}
+
 
 
 /* FORMAT FOR PHONES */ 

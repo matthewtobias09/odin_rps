@@ -11,40 +11,40 @@
 <body>
     <div class="wrap">
     <header>
-        <span class="fire">Fire</span> <span class="earth">Earth</span> <span class="water">Water</span><br>
+        <span class="fireSpan">Fire</span> <span class="earthSpan">Earth</span> <span class="waterSpan">Water</span><br>
     </header>
 
     <main>
     <section id="description">
-        <span class="fire">Fire</span> beats <span class="earth">Earth</span> |
-        <span class="earth">Earth</span> beats <span class="water">Water</span> |
-        <span class="water">Water</span> beats <span class="fire">Fire</span>
+        <span class="fireSpan">Fire</span> beats <span class="earthSpan">Earth</span> |
+        <span class="earthSpan">Earth</span> beats <span class="waterSpan">Water</span> |
+        <span class="waterSpan">Water</span> beats <span class="fireSpan">Fire</span>
 
         <br><br>First to <span class="p2-font">five points</span> wins
     </section>
 
     <section id="score-content">
-        <div>Player Points: <span class="player-points">Score</span></div> 
-        <div>Computer Points: <span class="computer-points">Score</span></div>
+        <div>Player Points: <span id="playerpoints">0</span></div> 
+        <div>Computer Points: <span id="computerpoints">0</span></div>
     </section>
 
     <section class="flex-content">
-        <div id="player-input">
-            <button id="firebtn"><img src="img/fire.png"></button>
-            <button id="earthbtn"><img src="img/earth.png"></button>
-            <button id="waterbtn"><img src="img/water.png"></button>
+        <div id="image-icons">
+            <img src="img/fire.png">
+            <img src="img/earth.png">
+            <img src="img/water.png">
         </div>
             <div id="input-caption">
-            <span class="fire caption">Fire</span> | <span class="earth caption">Earth</span> | <span class="water caption">Water</span>
+            <button data-selection="fire"><span class="fireSpan caption">Fire</span></button> | <button data-selection="earth"><span class="earthSpan caption">Earth</span></button> | <button data-selection="water"><span class="waterSpan caption">Water</span></button>
             </div>
 
             <div id="selection">
-                <div>Player picked: <span class="player-selection">Item</span></div> 
-                <div>Computer picked: <span class="computer-selection">Item</span></div>
+                <div>Player picked: <span id="playerselection"></span></div> 
+                <div>Computer picked: <span id="computerselection"></span></div>
             </div>
 
             <div id="result">
-                <div>Player <span class="text-result">won/lost</span> against computer this round</div>
+                <div><span id="textresult"></span></div>
             </div>
         </div>
     </section>
