@@ -16,8 +16,21 @@ let computerPoints = 0
 choices.forEach(playerChoices => {
     playerChoices.addEventListener('click', e => {
         userChoice = playerChoices.dataset.selection 
+
+        // Quit the game if someone reaches 5 points
         if (playerPoints == 5 || computerPoints == 5) {
             return
+        }
+
+        // Remove the color class so it can be reapplied each round
+        playerSelection.classList.remove('fireSpan', 'earthSpan', 'waterSpan')
+
+        if (userChoice == 'fire') {
+            playerSelection.classList.add('fireSpan')
+        } else if (userChoice == 'earth') {
+            playerSelection.classList.add('earthSpan')
+        } else if (userChoice == 'water') {
+            playerSelection.classList.add('waterSpan')
         }
         playerSelection.innerHTML = userChoice
 
@@ -29,12 +42,18 @@ choices.forEach(playerChoices => {
 function computerSelect() {
     const randNumber = Math.floor(Math.random() * 3) + 1
 
+    // Remove the color class so it can be reapplied each round
+    computerSelection.classList.remove('fireSpan', 'earthSpan', 'waterSpan')
+
     if (randNumber === 1) {
         computerChoice = 'fire'
+        computerSelection.classList.add('fireSpan')
     } else if (randNumber === 2) {
         computerChoice = 'earth'
+        computerSelection.classList.add('earthSpan')
     } else {
         computerChoice = 'water'
+        computerSelection.classList.add('waterSpan')
     }
     computerSelection.innerHTML = computerChoice
 }
@@ -67,8 +86,10 @@ function checkWinner() {
     computerpts.innerHTML= computerPoints
 
     if (playerPoints == 5) {
+        resultDisplay.classList.add('p2-font')
         resultDisplay.innerHTML = 'THE PLAYER WINS THE GAME!' 
     } else if (computerPoints == 5) {
+        resultDisplay.classList.add('p2-font')
         resultDisplay.innerHTML = 'THE COMPUTER WINS THE GAME!'
     }
 
